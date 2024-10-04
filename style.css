@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    /* justify-items: center;
+    align-items: center; */
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    background-color: #30b8d4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    margin: 1%;;
+
+}
+
+.humair {
+    width: 100%;
+    margin: 0px;
+    margin-top: 10%;
+    padding: 0px;
+    display: flex;
+    /* flex-direction:c */
+    justify-content: space-between;
+    align-items: end;
+    /* align-items: center; */
+}
+
+.contain {
+    margin-left: 20%;
+}
+
+.humid {
+    display: flex;
+    align-items: center;
+
+    /* margin: 0px;
+    margin-top: 2%; */
+}
+
+.wind {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    /* margin: 0px;
+        margin-top: 2%; */
+}
+.wind .contain1{
+    margin-left: 10%;
+}
+
+
+.value h1 {
+    text-align: center;
+}
+
+/* .humair .humid{
+    background-color: #aa1c1c;
+}
+.humair .air{
+    background-color: #aa1c1c;
+} */
+.humid img {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 20%;
+}
+
+.wind img {
+    width: 30%;
+    height: 30%;
+    margin-bottom: 20%;
+}
+
+.inputbox {
+    /* display: flex; */
+    justify-content: center;
+    width: 70%;
+    /* background-color: #fff; */
+    align-items: center;
+}
+
+.inputbox input {
+    width: 70%;
+    height: 60%;
+    border-radius: 30px;
+}
+
+.inputbox button {
+    width: 14%;
+    height: 80%;
+    border: 0;
+    /* border-radius: 50%;  */
+    background-color: #30b8d4;
+    /* padding: 2%; */
+    cursor:  pointer;
+}
+
+.inputbox img {
+    width: 80%;
+    /* padding: 10%; */
+}
+
+.inputbox {
+    display: flex;
+    justify-content: space-evenly;
+}
