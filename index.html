@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="main">
+        <div class="card" role="main" aria-label="Weather Card">
+            <div class="inputbox">
+                <input type="text" placeholder="Enter city name" spellcheck="false" aria-label="City name">
+                <button aria-label="Search"><img src="search.png" alt="Search"></button>
+            </div>
+            <div class="value">
+                <img src="clouds.png" alt="Weather icon" class="wheatherimg" id="weatherimg">
+                <h3 style="align-items: center;"></h3></h3>
+                <h1 id="temp">22°C</h1>
+                <h1 id="city">New York</h1>
+            </div>
+            <div class="humair">
+                <div class="humid">
+                    <img src="humidity.png" alt="Humidity icon">
+                    <div class="contain">
+                        <h2 class="humidity">50%</h2>
+                        <h4>Humidity</h4>
+                    </div>
+                </div>
+                <div class="wind">
+                    <img src="wind.png" alt="Wind icon">
+                    <div class="contain contain1">
+                        <h2>15km/h</h2>
+                        <h4>Wind</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

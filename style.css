@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    background-color: #30b8d4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    margin: 1%;
+    width: 350px;
+    max-width: 95vw;
+    box-sizing: border-box;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+}
+
+.inputbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.inputbox input {
+    width: 70%;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid #b0c4de;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.inputbox input:focus {
+    border: 1.5px solid #6495ed;
+}
+
+.inputbox button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #30b8d4;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.inputbox button:hover {
+    background: #249bb3;
+}
+
+.inputbox img {
+    width: 22px;
+    height: 22px;
+}
+
+.value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.value h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.wheatherimg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.humair {
+    width: 100%;
+    margin: 0px;
+    margin-top: 10%;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.humid, .wind {
+    display: flex;
+    align-items: center;
+    background: #f0f8ff;
+    border-radius: 14px;
+    padding: 0.7rem 1rem;
+    flex: 1;
+    box-shadow: 0 2px 8px rgba(100,149,237,0.08);
+    min-width: 0;
+    gap: 0.7rem;
+}
+
+.humid img, .wind img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0;
+}
+
+.contain {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wind .contain1 {
+    margin-left: 10%;
+}
+
+.contain h2, .contain1 h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #4169e1;
+}
+
+.contain h4, .contain1 h4 {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #555;
+    font-weight: 400;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .main {
+        padding: 0;
+        height: auto;
+        min-height: 100vh;
+    }
+    .card {
+        width: 95vw;
+        padding: 1rem 0.5rem;
+        margin: 0.5rem;
+        border-radius: 16px;
+    }
+    .inputbox {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    .inputbox input {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .inputbox button {
+        width: 40px;
+        height: 40px;
+    }
+    .humair {
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: stretch;
+        margin-top: 1rem;
+    }
+    .humid, .wind {
+        flex-direction: row;
+        justify-content: flex-start;
+        min-width: 0;
+        padding: 0.7rem 0.5rem;
+    }
+    .wind .contain1 {
+        margin-left: 0;
+    }
+    .wheatherimg {
+        width: 60px;
+        height: 60px;
+    }
+    .value h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        padding: 0.5rem 0.2rem;
+        border-radius: 10px;
+    }
+    .wheatherimg {
+        width: 40px;
+        height: 40px;
+    }
+    .value h1 {
+        font-size: 1.2rem;
+    }
+}
