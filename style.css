@@ -1,118 +1,135 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body, html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+  height: 100%;
+}
+
 .main {
-    margin: 0px;
-    padding: 0px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    /* justify-items: center;
-    align-items: center; */
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
 }
 
 .card {
-    background-color: #30b8d4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-    margin: 1%;;
-
-}
-
-.humair {
-    width: 100%;
-    margin: 0px;
-    margin-top: 10%;
-    padding: 0px;
-    display: flex;
-    /* flex-direction:c */
-    justify-content: space-between;
-    align-items: end;
-    /* align-items: center; */
-}
-
-.contain {
-    margin-left: 20%;
-}
-
-.humid {
-    display: flex;
-    align-items: center;
-
-    /* margin: 0px;
-    margin-top: 2%; */
-}
-
-.wind {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-    /* margin: 0px;
-        margin-top: 2%; */
-}
-.wind .contain1{
-    margin-left: 10%;
-}
-
-
-.value h1 {
-    text-align: center;
-}
-
-/* .humair .humid{
-    background-color: #aa1c1c;
-}
-.humair .air{
-    background-color: #aa1c1c;
-} */
-.humid img {
-    width: 30%;
-    height: 30%;
-    margin-bottom: 20%;
-}
-
-.wind img {
-    width: 30%;
-    height: 30%;
-    margin-bottom: 20%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  text-align: center;
 }
 
 .inputbox {
-    /* display: flex; */
-    justify-content: center;
-    width: 70%;
-    /* background-color: #fff; */
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .inputbox input {
-    width: 70%;
-    height: 60%;
-    border-radius: 30px;
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
 }
 
 .inputbox button {
-    width: 14%;
-    height: 80%;
-    border: 0;
-    /* border-radius: 50%;  */
-    background-color: #30b8d4;
-    /* padding: 2%; */
-    cursor:  pointer;
+  background: #1fa2ff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
 }
 
 .inputbox img {
-    width: 80%;
-    /* padding: 10%; */
+  width: 20px;
+  height: 20px;
 }
 
-.inputbox {
-    display: flex;
-    justify-content: space-evenly;
+.weather-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 10px 0;
+}
+
+.weather h1 {
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+
+.weather h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.condition {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.detail-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-box img {
+  width: 40px;
+  height: 40px;
+}
+
+.detail-box h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.detail-box p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 15px;
+  }
+
+  .inputbox input {
+    font-size: 14px;
+  }
+
+  .weather h1 {
+    font-size: 36px;
+  }
+
+  .weather h2 {
+    font-size: 20px;
+  }
+
+  .detail-box h2 {
+    font-size: 18px;
+  }
+
+  .detail-box p {
+    font-size: 12px;
+  }
 }
