@@ -1,68 +1,70 @@
-console.log("Weather App Loaded");
+const apiKey = "b47a52b2d2650c58f395e2262975a515";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
 
-const apiurl = "https://api.openweathermap.org/data/2.5/weather?q=";
-const apikey = "b47a52b2d2650c58f395e2262975a515";
+const input = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
+const icon = document.querySelector(".icon");
+const description = document.querySelector(".description");
+const temp = document.querySelector(".temperature");
+const city = document.querySelector(".city");
+const humidity = document.querySelector(".humidity");
+const wind = document.querySelector(".wind");
 
-const cityInput = document.querySelector(".inputbox input");
-const searchBtn = document.querySelector(".inputbox button");
-const weatherIcon = document.querySelector(".weather-img");
-
-// Fetch weather data
-async function getdata(city) {
+async function getWeather(cityName) {
   try {
-    const response = await fetch(`${apiurl}${city}&appid=${apikey}&units=metric`);
+    const response = await fetch(`${apiUrl}${cityName}&appid=${apiKey}&units=metric`);
     const data = await response.json();
 
     if (data.cod !== 200) {
-      alert("❌ City not found!");
+      alert("City not found!");
       return;
     }
 
-    // Update values
-    document.getElementById("temp").innerHTML = `${data.main.temp}°C`;
-    document.getElementById("city").innerHTML = data.name;
-    document.querySelector(".humidity-val").innerHTML = `${data.main.humidity}%`;
-    document.querySelector(".wind-val").innerHTML = `${data.wind.speed} km/h`;
-    document.querySelector(".condition").innerHTML = data.weather[0].main;
+    // Update weather info
+    temp.innerHTML = `${data.main.temp}°C`;
+    city.innerHTML = data.name;
+    humidity.innerHTML = `${data.main.humidity}%`;
+    wind.innerHTML = `${data.wind.speed} km/h`;
 
-    // Update weather icon
-    switch (data.weather[0].main) {
+    const weatherMain = data.weather[0].main;
+
+    description.innerHTML = weatherMain;
+
+    switch (weatherMain) {
       case "Clear":
-        weatherIcon.src = "clear.png";
+        icon.src = "clear.png";
         break;
       case "Clouds":
-        weatherIcon.src = "clouds.png";
+        icon.src = "clouds.png";
         break;
       case "Drizzle":
-        weatherIcon.src = "drizzle.png";
+        icon.src = "drizzle.png";
         break;
       case "Mist":
-        weatherIcon.src = "mist.png";
+        icon.src = "mist.png";
         break;
       case "Rain":
-        weatherIcon.src = "rain.png";
+        icon.src = "rain.png";
         break;
       case "Snow":
-        weatherIcon.src = "snow.png";
+        icon.src = "snow.png";
         break;
       default:
-        weatherIcon.src = "clouds.png";
+        icon.src = "clouds.png";
     }
-  } catch (err) {
-    console.error("Fetch error:", err);
-    alert("⚠️ Unable to fetch weather data. Please try again.");
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
   }
 }
 
-// Event listeners
 searchBtn.addEventListener("click", () => {
-  if (cityInput.value.trim() !== "") {
-    getdata(cityInput.value.trim());
+  if (input.value.trim() !== "") {
+    getWeather(input.value.trim());
   }
 });
 
-cityInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter" && cityInput.value.trim() !== "") {
-    getdata(cityInput.value.trim());
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter" && input.value.trim() !== "") {
+    getWeather(input.value.trim());
   }
 });
